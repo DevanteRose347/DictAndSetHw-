@@ -7,27 +7,27 @@
 # 4) The User can see current shopping list
 # 5) The program Loops until user 'quits'
 # 6) Upon quiting the program, print out all items in the user's list -->
-# def store():
-#     shopping_cart = {}
-#     while True:  
-#         quantity= input("please enter amount of item or Enter quit to quit! and delete to delete! : ")
+def store():
+    shopping_cart = {}
+    while True:  
+        quantity= input("please enter amount of item or Enter quit to quit! and delete to delete! : ")
     
-#         if quantity.strip().lower() != 'quit' and 'delete':
-#             item = input("please enter item or Enter quit to quit! and delete to delete! : ")
-#         shopping_cart[quantity] = item
+        if quantity.strip().lower() != 'quit' and 'delete':
+            item = input("please enter item or Enter quit to quit! and delete to delete! : ")
+        shopping_cart[quantity] = item
          
 
-#         if quantity.strip().lower() == 'delete' or item.strip().lower() == 'delete':
-#             shopping_cart.popitem()
+        if quantity.strip().lower() == 'delete' or item.strip().lower() == 'delete':
+            shopping_cart.popitem()
         
-#         print(shopping_cart)
+        print(shopping_cart)
         
-#         if item.strip().lower() == 'quit' or quantity.strip().lower() == 'quit':
-#             for item, quantity in shopping_cart.items():
-#                 print(f"{quantity} {item} is in shopping cart")
-#             break
+        if item.strip().lower() == 'quit' or quantity.strip().lower() == 'quit':
+            for item, quantity in shopping_cart.items():
+                print(f"{quantity} {item} is in shopping cart")
+            break
        
-# store()
+store()
         
 
        
