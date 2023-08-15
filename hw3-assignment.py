@@ -11,20 +11,22 @@ def store():
     shopping_cart = {}
     
     while True:
-        item = input("please enter item or Enter quit to quit! and delete to delete! : ")  
+        item = input("please enter item or Enter quit to quit! and delete to delete! : ").strip()  
         
-        if item.strip().lower() != 'quit' or 'delete':
+        if item.strip().lower() != 'quit' and item.strip().lower() !='delete':
             quantity = input("please enter amount of item or Enter quit to quit! and delete to delete! : ")
+            shopping_cart[item] = quantity
+        
         
         elif item.strip().lower() == 'delete' or quantity.strip().lower() == 'delete':
-              delete = input("what item do you want to delete")
-              del(delete)
+            delete = input("please enter item you want to delete! : ")
+            del(shopping_cart[delete])
         
         else:
             for item, quantity in shopping_cart.items():
-                print(f"{quantity} {item} is in shopping cart")
+                print(f"{item} {quantity} is in shopping cart")
             break
-        shopping_cart[item] = quantity
+       
 
         print(shopping_cart)  
    
